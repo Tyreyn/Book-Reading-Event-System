@@ -1,7 +1,6 @@
 using BookReadingEventSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
 namespace BookReadingEventSystem.Controllers
 {
     public class HomeController : Controller
