@@ -1,7 +1,11 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<BookReadingEventSystemDTO.Data.BookReadingEventSystemContext>(options =>
+    options.UseMySQL(builder.Configuration.GetConnectionString("default")));
 
 var app = builder.Build();
 
